@@ -1,7 +1,24 @@
 # Teksto atrinkejas is pdf/jpeg
 
-## Projekto aprasymas
+Tai Python projektas, kuris už jus perskaitys pdf faile, bei nuotraukoje esanti tekstą ir atrinks visas slaptas sąlygas. Jas pažymės ir parodys jums, taip sutaupysite daug laiko ir nereikės pačiam visko skaityti.
 
-- Mano darbas yra sukurtas tam, kad padetu zmonems sutaupyti laiko, gavus sutarti su pasleptomis salygomis, automatiskai jas surastu ir parodytu visa punkta su ta salyga.
-- Taip zmonems nereikes skaityti 5-20 puslapiu pilnai surasytu mazomis raidemis salygu.
-- Tai pades ne tik sutaupyti daug laiko, bei pinigu.
+## Projekto aprasymas, bei nauda
+
+- Mano darbas yra sukurtas tam, kad padėtu žmonėms sutaupyti laiko, gavus sutartį su paslėptomis sąlygomis, automatiškai jas surastu ir parodytų visa punktą su ta sąlyga.
+- Taip žmonėms nereikės skaityti 5-20 puslapiu pilnai surasytu mažomis raidėmis sąlygų.
+- Tai padės ne tik sutaupyti daug laiko, bei pinigų.
+- Nereikės kopijuoti teksto ir jo išsiversti "Google tranlator"
+
+## Priemonės
+
+Python 3.7 VSCod
+
+
+
+
+
+
+
+
+## Darbo eiga
+
