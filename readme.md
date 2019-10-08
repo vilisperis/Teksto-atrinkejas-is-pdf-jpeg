@@ -11,7 +11,8 @@ Tai Python projektas, kuris už jus perskaitys pdf faile, bei nuotraukoje esanti
 
 ## Priemonės
 
-Python 3.7 VSCod moduliai:
+Python 3.7 VSCod moduliai
+
 -1.PyPDF2
 -2.textract
 -3.nltk
