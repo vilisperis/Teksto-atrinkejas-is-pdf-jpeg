@@ -15,7 +15,6 @@ Python 3.7 VSCod moduliai
 
 -  PyPDF2
 -  textract
--  nltk
 
 ## Darbo eiga
 
