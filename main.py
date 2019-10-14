@@ -8,7 +8,7 @@ from nltk.corpus import stopwords
 
 filename = 'viso.pdf'
 search_for = "Palettenschein"
-def searchInPDF(filename, key):
+def searchInPDF(filename, search_for):
     occurrences = 0
     pdfFileObj = open(filename,'rb')
     pdfReader = PyPDF2.PdfFileReader(pdfFileObj)
@@ -28,7 +28,12 @@ def searchInPDF(filename, key):
     stop_words = stopwords.words('english')
     keywords = [word for word in tokens if not word in stop_words and  not word in punctuation]
     for k in keywords:
-        if key == k: occurrences+=1
+        if search_for == k: occurrences+=1
     return occurrences 
 
 print(searchInPDF(filename, search_for))
+
+tokens = ['technisch', "pallet", "waiting times", "pauschal", "Palettentausch", ]
+for token in tokens:
+    if token in text.split(' '):
+        print(token, 'found')
