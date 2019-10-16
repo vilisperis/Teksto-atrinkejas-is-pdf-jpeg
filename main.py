@@ -7,8 +7,8 @@ from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 
 filename = 'viso.pdf'
-search_for = "Palettenschein"
-def searchInPDF(filename, search_for):
+search_for_words = "Palettenschein"
+def searchInPDF(filename, search_for_words):
     occurrences = 0
     pdfFileObj = open(filename,'rb')
     pdfReader = PyPDF2.PdfFileReader(pdfFileObj)
@@ -20,9 +20,9 @@ def searchInPDF(filename, search_for):
         count +=1
         text += pageObj.extractText()
     if text != "":
-       text = text
+        text = text
     else:
-       text = textract.process(filename, method='tesseract', language='eng')
+        text = textract.process(filename, method='tesseract', language='eng')
     tokens = word_tokenize(text)
     punctuation = ['(',')',';',':','[',']',',']
     stop_words = stopwords.words('english')
@@ -30,10 +30,7 @@ def searchInPDF(filename, search_for):
     for k in keywords:
         if search_for == k: occurrences+=1
     return occurrences 
-
-print(searchInPDF(filename, search_for))
-
-tokens = ['technisch', "pallet", "waiting times", "pauschal", "Palettentausch", ]
+tokens = ['technisch', "pallet", "waiting times", "pauschal", "Palettentausch", "minimum", "original", "cmr", "signature", "(EP)" ]
 for token in tokens:
     if token in text.split(' '):
         print(token, 'found')
