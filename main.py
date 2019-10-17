@@ -1,12 +1,13 @@
 import os
-os.chdir("C:\\Users\\Pc")
-
 import PyPDF2 
 import textract
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
+import sys
 
-filename = 'viso.pdf'
+arguments = sys.argv[1:]
+filename = arguments[0]
+print('Skaitysime faila:', filename)
 search_for_words = "Palettenschein"
 def searchInPDF(filename, search_for_words):
     """Looks for tokens in pdf files.
@@ -36,8 +37,9 @@ def searchInPDF(filename, search_for_words):
     punctuation = ['(',')',';',':','[',']',',']
     stop_words = stopwords.words('english')
     keywords = [word for word in tokens if not word in stop_words and  not word in punctuation]
-    for k in keywords:"""This functions prints its arg
-        if search_for == k: occurrences+=1
+    for k in keywords:
+        if search_for == k:
+            occurrences+=1
     return occurrences 
 tokens = ['technisch', "pallet", "waiting times", "pauschal", "Palettentausch", "minimum", "original", "cmr", "signature", "(EP)" ]
 for token in tokens:
